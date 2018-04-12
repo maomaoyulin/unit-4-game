@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Crystal Collector</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets\css\reset.css">
+    <link rel="stylesheet" type="text/css" href="assets\css\style.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab|Yellowtail' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <h1 class="text-center"><strong>Crystal Collector</strong></h1>
+
+        <br>
+
+        <div id="game">
+
+            <h3>Please Collect the Crystal Value as:</h3>
+
+            <br><br>
+
+            <div id="targetEl">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Target</div>
+                    <div class="panel-body" id="target">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div id="scoreEl">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Your total score is:</div>
+                    <div class="panel-body" id="score">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div id="calculateEl">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">Click the right crystal:</div>
+                    <div class="panel-body" id="calculate">
+                        <div class="crystalBtns">
+                            <button id="crystal-red" class="btn crystal"><img src="assets/images/red.PNG" /></button>
+                            <button id="crystal-yellow" class="btn crystal"><img src="assets/images/yellow.PNG" /></button>
+                            <button id="crystal-blue" class="btn crystal"><img src="assets/images/blue.PNG" /></button>
+                            <button id="crystal-green" class="btn crystal"><img src="assets/images/green.PNG" /></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="recordsEl">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Records</div>
+                    <div class="panel-body" id="records">
+                        <p>Wins:</p>
+                        <div id="wins"></div>
+                        <p>Losses:</p>
+                        <div id="losses"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="play"></div>
+            
+        </div>
+    </div>
+    <script src="assets\javascript\game.js"></script>
+</body>
+</html>

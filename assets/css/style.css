@@ -1,0 +1,12 @@
+body {
+    background-image: url(../images/halftone-yellow.png);
+}
+
+.container {
+    margin: 25px 20px 45px 20px;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
