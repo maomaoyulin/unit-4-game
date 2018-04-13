@@ -24,38 +24,56 @@ $(document).ready(function() {
     }
 
     function initialize() {
+        score = 0;
+        targetNum = getRandomInt(19, 120);
         $("#target").text(targetNum);
         $("#wins").text(wins);
         $("#losses").text(losses);
         $("#score").text(score);
+
+        $("#crystal-red").val(redNum);
+        $("#crystal-yellow").val(yellowNum);
+        $("#crystal-blue").val(blueNum);
+        $("#crystal-green").val(greenNum);
     }
 
+    initialize();
+  
     $(".crystalBtns").on("click", ".crystal", function() {
-        
-        $("crystal-red").val(redNum);
-        $("crystal-yellow").val(yellowNum);
-        $("crystal-blue").val(blueNum);
-        $("crystal-green").val(greenNum);
+
+        score = Number(score) + Number($(this).val());
+        $("#score").text(score);
+        console.log(score);
 
         if (score === targetNum) {
             alert("You Make It!");
             wins++;
             $("#wins").text(wins);
             initialize();
-        }else {
-            if (score > targetNum) {
-                alert("You Failed! Try Again!");
-                losses++;
-                $("#losses").text(losses);
-                initialize();
-            }else {
-                score += $(this).val();
-                $("#score").text(score);
-                console.log(score);
-            }
+
+        } else if (score > targetNum) {
+            alert("You Failed! Try Again!");
+            losses++;
+            $("#losses").text(losses);
+            initialize();
         }
+        // if (score === targetNum) {
+        //     alert("You Make It!");
+        //     wins++;
+        //     $("#wins").text(wins);
+        //     initialize();
+        // }else if (score > targetNum) {
+        //     alert("You Failed! Try Again!");
+        //     losses++;
+        //     $("#losses").text(losses);
+        //     initialize();
+        // }else {
+        //     score = Number(score) + Number($(this).val());
+        //     $("#score").text(score);
+        //     console.log(score);
+        // }
 
     })    
 
-    initialize();
+    
 })
